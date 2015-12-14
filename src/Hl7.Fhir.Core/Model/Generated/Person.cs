@@ -293,13 +293,13 @@ namespace Hl7.Fhir.Model
         [FhirElement("address", Order=140)]
         [Cardinality(Min=0,Max=-1)]
         [DataMember]
-        public List<Hl7.Fhir.Model.Address> Address
+        public List<Hl7.Fhir.Model.FhirAddress> Address
         {
-            get { if(_Address==null) _Address = new List<Hl7.Fhir.Model.Address>(); return _Address; }
+            get { if(_Address==null) _Address = new List<Hl7.Fhir.Model.FhirAddress>(); return _Address; }
             set { _Address = value; OnPropertyChanged("Address"); }
         }
         
-        private List<Hl7.Fhir.Model.Address> _Address;
+        private List<Hl7.Fhir.Model.FhirAddress> _Address;
         
         /// <summary>
         /// Image of the person
@@ -386,7 +386,7 @@ namespace Hl7.Fhir.Model
                 if(Telecom != null) dest.Telecom = new List<Hl7.Fhir.Model.ContactPoint>(Telecom.DeepCopy());
                 if(GenderElement != null) dest.GenderElement = (Code<Hl7.Fhir.Model.AdministrativeGender>)GenderElement.DeepCopy();
                 if(BirthDateElement != null) dest.BirthDateElement = (Hl7.Fhir.Model.Date)BirthDateElement.DeepCopy();
-                if(Address != null) dest.Address = new List<Hl7.Fhir.Model.Address>(Address.DeepCopy());
+                if(Address != null) dest.Address = new List<Hl7.Fhir.Model.FhirAddress>(Address.DeepCopy());
                 if(Photo != null) dest.Photo = (Hl7.Fhir.Model.Attachment)Photo.DeepCopy();
                 if(ManagingOrganization != null) dest.ManagingOrganization = (Hl7.Fhir.Model.ResourceReference)ManagingOrganization.DeepCopy();
                 if(ActiveElement != null) dest.ActiveElement = (Hl7.Fhir.Model.FhirBoolean)ActiveElement.DeepCopy();

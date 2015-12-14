@@ -422,13 +422,13 @@ namespace Hl7.Fhir.Model
         /// </summary>
         [FhirElement("address", Order=160)]
         [DataMember]
-        public Hl7.Fhir.Model.Address Address
+        public Hl7.Fhir.Model.FhirAddress Address
         {
             get { return _Address; }
             set { _Address = value; OnPropertyChanged("Address"); }
         }
         
-        private Hl7.Fhir.Model.Address _Address;
+        private Hl7.Fhir.Model.FhirAddress _Address;
         
         /// <summary>
         /// Physical form of the location
@@ -498,7 +498,7 @@ namespace Hl7.Fhir.Model
                 if(ModeElement != null) dest.ModeElement = (Code<Hl7.Fhir.Model.Location.LocationMode>)ModeElement.DeepCopy();
                 if(Type != null) dest.Type = (Hl7.Fhir.Model.CodeableConcept)Type.DeepCopy();
                 if(Telecom != null) dest.Telecom = new List<Hl7.Fhir.Model.ContactPoint>(Telecom.DeepCopy());
-                if(Address != null) dest.Address = (Hl7.Fhir.Model.Address)Address.DeepCopy();
+                if(Address != null) dest.Address = (Hl7.Fhir.Model.FhirAddress)Address.DeepCopy();
                 if(PhysicalType != null) dest.PhysicalType = (Hl7.Fhir.Model.CodeableConcept)PhysicalType.DeepCopy();
                 if(Position != null) dest.Position = (Hl7.Fhir.Model.Location.LocationPositionComponent)Position.DeepCopy();
                 if(ManagingOrganization != null) dest.ManagingOrganization = (Hl7.Fhir.Model.ResourceReference)ManagingOrganization.DeepCopy();

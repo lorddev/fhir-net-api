@@ -45,7 +45,7 @@ namespace Hl7.Fhir.Model
     /// </summary>
     [FhirType("Address")]
     [DataContract]
-    public partial class Address : Hl7.Fhir.Model.Element, System.ComponentModel.INotifyPropertyChanged
+    public partial class FhirAddress : Hl7.Fhir.Model.Element, System.ComponentModel.INotifyPropertyChanged
     {
         [NotMapped]
         public override string TypeName { get { return "Address"; } }
@@ -106,13 +106,13 @@ namespace Hl7.Fhir.Model
         /// </summary>
         [FhirElement("use", InSummary=true, Order=30)]
         [DataMember]
-        public Code<Hl7.Fhir.Model.Address.AddressUse> UseElement
+        public Code<Hl7.Fhir.Model.FhirAddress.AddressUse> UseElement
         {
             get { return _UseElement; }
             set { _UseElement = value; OnPropertyChanged("UseElement"); }
         }
         
-        private Code<Hl7.Fhir.Model.Address.AddressUse> _UseElement;
+        private Code<Hl7.Fhir.Model.FhirAddress.AddressUse> _UseElement;
         
         /// <summary>
         /// home | work | temp | old - purpose of this address
@@ -120,7 +120,7 @@ namespace Hl7.Fhir.Model
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
         [NotMapped]
         [IgnoreDataMemberAttribute]
-        public Hl7.Fhir.Model.Address.AddressUse? Use
+        public Hl7.Fhir.Model.FhirAddress.AddressUse? Use
         {
             get { return UseElement != null ? UseElement.Value : null; }
             set
@@ -128,7 +128,7 @@ namespace Hl7.Fhir.Model
                 if(value == null)
                   UseElement = null; 
                 else
-                  UseElement = new Code<Hl7.Fhir.Model.Address.AddressUse>(value);
+                  UseElement = new Code<Hl7.Fhir.Model.FhirAddress.AddressUse>(value);
                 OnPropertyChanged("Use");
             }
         }
@@ -138,13 +138,13 @@ namespace Hl7.Fhir.Model
         /// </summary>
         [FhirElement("type", InSummary=true, Order=40)]
         [DataMember]
-        public Code<Hl7.Fhir.Model.Address.AddressType> TypeElement
+        public Code<Hl7.Fhir.Model.FhirAddress.AddressType> TypeElement
         {
             get { return _TypeElement; }
             set { _TypeElement = value; OnPropertyChanged("TypeElement"); }
         }
         
-        private Code<Hl7.Fhir.Model.Address.AddressType> _TypeElement;
+        private Code<Hl7.Fhir.Model.FhirAddress.AddressType> _TypeElement;
         
         /// <summary>
         /// postal | physical | both
@@ -152,7 +152,7 @@ namespace Hl7.Fhir.Model
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
         [NotMapped]
         [IgnoreDataMemberAttribute]
-        public Hl7.Fhir.Model.Address.AddressType? Type
+        public Hl7.Fhir.Model.FhirAddress.AddressType? Type
         {
             get { return TypeElement != null ? TypeElement.Value : null; }
             set
@@ -160,7 +160,7 @@ namespace Hl7.Fhir.Model
                 if(value == null)
                   TypeElement = null; 
                 else
-                  TypeElement = new Code<Hl7.Fhir.Model.Address.AddressType>(value);
+                  TypeElement = new Code<Hl7.Fhir.Model.FhirAddress.AddressType>(value);
                 OnPropertyChanged("Type");
             }
         }
@@ -405,13 +405,13 @@ namespace Hl7.Fhir.Model
         
         public override IDeepCopyable CopyTo(IDeepCopyable other)
         {
-            var dest = other as Address;
+            var dest = other as FhirAddress;
             
             if (dest != null)
             {
                 base.CopyTo(dest);
-                if(UseElement != null) dest.UseElement = (Code<Hl7.Fhir.Model.Address.AddressUse>)UseElement.DeepCopy();
-                if(TypeElement != null) dest.TypeElement = (Code<Hl7.Fhir.Model.Address.AddressType>)TypeElement.DeepCopy();
+                if(UseElement != null) dest.UseElement = (Code<Hl7.Fhir.Model.FhirAddress.AddressUse>)UseElement.DeepCopy();
+                if(TypeElement != null) dest.TypeElement = (Code<Hl7.Fhir.Model.FhirAddress.AddressType>)TypeElement.DeepCopy();
                 if(TextElement != null) dest.TextElement = (Hl7.Fhir.Model.FhirString)TextElement.DeepCopy();
                 if(LineElement != null) dest.LineElement = new List<Hl7.Fhir.Model.FhirString>(LineElement.DeepCopy());
                 if(CityElement != null) dest.CityElement = (Hl7.Fhir.Model.FhirString)CityElement.DeepCopy();
@@ -428,12 +428,12 @@ namespace Hl7.Fhir.Model
         
         public override IDeepCopyable DeepCopy()
         {
-            return CopyTo(new Address());
+            return CopyTo(new FhirAddress());
         }
         
         public override bool Matches(IDeepComparable other)
         {
-            var otherT = other as Address;
+            var otherT = other as FhirAddress;
             if(otherT == null) return false;
             
             if(!base.Matches(otherT)) return false;
@@ -453,7 +453,7 @@ namespace Hl7.Fhir.Model
         
         public override bool IsExactly(IDeepComparable other)
         {
-            var otherT = other as Address;
+            var otherT = other as FhirAddress;
             if(otherT == null) return false;
             
             if(!base.IsExactly(otherT)) return false;

@@ -156,7 +156,7 @@ namespace Hl7.Fhir.Model
         public static Dictionary<string,Type> FhirTypeToCsType =
             new Dictionary<string,Type>()
             {
-                { "Address", typeof(Hl7.Fhir.Model.Address) },
+                { "Address", typeof(Hl7.Fhir.Model.FhirAddress) },
                 { "Age", typeof(Hl7.Fhir.Model.Age) },
                 { "Annotation", typeof(Hl7.Fhir.Model.Annotation) },
                 { "Attachment", typeof(Hl7.Fhir.Model.Attachment) },
@@ -302,7 +302,7 @@ namespace Hl7.Fhir.Model
         public static Dictionary<Type,string> FhirCsTypeToString =
             new Dictionary<Type,string>()
             {
-                { typeof(Hl7.Fhir.Model.Address), "Address" },
+                { typeof(Hl7.Fhir.Model.FhirAddress), "Address" },
                 { typeof(Hl7.Fhir.Model.Age), "Age" },
                 { typeof(Hl7.Fhir.Model.Annotation), "Annotation" },
                 { typeof(Hl7.Fhir.Model.Attachment), "Attachment" },

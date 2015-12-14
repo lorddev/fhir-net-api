@@ -83,6 +83,7 @@
     <Compile Include="Model\Date.cs" />
     <Compile Include="Model\BackboneElement.cs" />
     <Compile Include="Model\Generated\Account.cs" />
+    <Compile Include="Model\Generated\FhirAddress.cs" />
     <Compile Include="Model\Generated\Annotation.cs" />
     <Compile Include="Model\Generated\DetectedIssue.cs" />
     <Compile Include="Model\Generated\ImplementationGuide.cs" />
@@ -165,7 +166,6 @@
     <Compile Include="Model\IDeepComparable.cs" />
     <Compile Include="Model\Integer.cs" />
     <Compile Include="Model\FhirUri.cs" />
-    <Compile Include="Model\Generated\Address.cs" />
     <Compile Include="Model\Generated\Age.cs" />
     <Compile Include="Model\Generated\AllergyIntolerance.cs" />
     <Compile Include="Model\Generated\Attachment.cs" />

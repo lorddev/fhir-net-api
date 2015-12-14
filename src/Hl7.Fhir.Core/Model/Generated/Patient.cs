@@ -427,13 +427,13 @@ namespace Hl7.Fhir.Model
             /// </summary>
             [FhirElement("address", InSummary=true, Order=70)]
             [DataMember]
-            public Hl7.Fhir.Model.Address Address
+            public Hl7.Fhir.Model.FhirAddress Address
             {
                 get { return _Address; }
                 set { _Address = value; OnPropertyChanged("Address"); }
             }
             
-            private Hl7.Fhir.Model.Address _Address;
+            private Hl7.Fhir.Model.FhirAddress _Address;
             
             /// <summary>
             /// male | female | other | unknown
@@ -504,7 +504,7 @@ namespace Hl7.Fhir.Model
                     if(Relationship != null) dest.Relationship = new List<Hl7.Fhir.Model.CodeableConcept>(Relationship.DeepCopy());
                     if(Name != null) dest.Name = (Hl7.Fhir.Model.HumanName)Name.DeepCopy();
                     if(Telecom != null) dest.Telecom = new List<Hl7.Fhir.Model.ContactPoint>(Telecom.DeepCopy());
-                    if(Address != null) dest.Address = (Hl7.Fhir.Model.Address)Address.DeepCopy();
+                    if(Address != null) dest.Address = (Hl7.Fhir.Model.FhirAddress)Address.DeepCopy();
                     if(GenderElement != null) dest.GenderElement = (Code<Hl7.Fhir.Model.AdministrativeGender>)GenderElement.DeepCopy();
                     if(Organization != null) dest.Organization = (Hl7.Fhir.Model.ResourceReference)Organization.DeepCopy();
                     if(Period != null) dest.Period = (Hl7.Fhir.Model.Period)Period.DeepCopy();
@@ -714,13 +714,13 @@ namespace Hl7.Fhir.Model
         [FhirElement("address", InSummary=true, Order=160)]
         [Cardinality(Min=0,Max=-1)]
         [DataMember]
-        public List<Hl7.Fhir.Model.Address> Address
+        public List<Hl7.Fhir.Model.FhirAddress> Address
         {
-            get { if(_Address==null) _Address = new List<Hl7.Fhir.Model.Address>(); return _Address; }
+            get { if(_Address==null) _Address = new List<Hl7.Fhir.Model.FhirAddress>(); return _Address; }
             set { _Address = value; OnPropertyChanged("Address"); }
         }
         
-        private List<Hl7.Fhir.Model.Address> _Address;
+        private List<Hl7.Fhir.Model.FhirAddress> _Address;
         
         /// <summary>
         /// Marital (civil) status of a patient
@@ -861,7 +861,7 @@ namespace Hl7.Fhir.Model
                 if(GenderElement != null) dest.GenderElement = (Code<Hl7.Fhir.Model.AdministrativeGender>)GenderElement.DeepCopy();
                 if(BirthDateElement != null) dest.BirthDateElement = (Hl7.Fhir.Model.Date)BirthDateElement.DeepCopy();
                 if(Deceased != null) dest.Deceased = (Hl7.Fhir.Model.Element)Deceased.DeepCopy();
-                if(Address != null) dest.Address = new List<Hl7.Fhir.Model.Address>(Address.DeepCopy());
+                if(Address != null) dest.Address = new List<Hl7.Fhir.Model.FhirAddress>(Address.DeepCopy());
                 if(MaritalStatus != null) dest.MaritalStatus = (Hl7.Fhir.Model.CodeableConcept)MaritalStatus.DeepCopy();
                 if(MultipleBirth != null) dest.MultipleBirth = (Hl7.Fhir.Model.Element)MultipleBirth.DeepCopy();
                 if(Photo != null) dest.Photo = new List<Hl7.Fhir.Model.Attachment>(Photo.DeepCopy());
